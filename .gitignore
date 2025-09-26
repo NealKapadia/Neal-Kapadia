@@ -44,8 +44,6 @@ yarn-error.log*
 next-env.d.ts
 
 # project-specific local files to ignore
-/Resume.pdf
-/public/Resume.pdf
 /WARP.md
 /index.html
 /portfolio/

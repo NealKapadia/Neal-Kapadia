@@ -12,6 +12,9 @@ export default function ProjectsPage() {
             {p.coverImage && (
               <div className="relative aspect-[16/9] w-full bg-surface border-b border-black/10 dark:border-white/10">
                 <Image src={p.coverImage} alt={p.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                {p.winner && (
+                  <span className="absolute top-2 left-2 text-xs px-2 py-1 rounded bg-[color:var(--accent)] text-white shadow">🏆 Winner</span>
+                )}
               </div>
             )}
             <div className="p-5">

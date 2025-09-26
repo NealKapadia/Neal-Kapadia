@@ -14,6 +14,7 @@ function TextureMaterial({ url }: { url: string }) {
 function ProjectCard3D({ project }: { project: Project }) {
   return (
     <group>
+      {/* Card */}
       <mesh>
         <boxGeometry args={[2.2, 1.3, 0.1]} />
         {project.coverImage ? (
@@ -22,6 +23,21 @@ function ProjectCard3D({ project }: { project: Project }) {
           <meshStandardMaterial color="#e5e5e5" />
         )}
       </mesh>
+
+      {/* Winner banner */}
+      {project.winner && (
+        <group position={[0, 0.9, 0.06]}>
+          <mesh position={[0, 0, -0.01]}>
+            <planeGeometry args={[1.6, 0.28]} />
+            <meshStandardMaterial color="#008080" />
+          </mesh>
+          <Text fontSize={0.16} color="#ffffff" anchorX="center" anchorY="middle">
+            🏆 Winner
+          </Text>
+        </group>
+      )}
+
+      {/* Title */}
       <Text
         position={[0, -0.9, 0.08]}
         fontSize={0.2}
