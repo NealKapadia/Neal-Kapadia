@@ -10,15 +10,15 @@ export default function ProjectsPage() {
         {projects.map((p) => (
           <li key={p.slug} className="rounded-lg border border-black/10 dark:border-white/15 bg-white/80 dark:bg-black/20 overflow-hidden">
             {p.coverImage && (
-              <div className="relative aspect-[16/9] w-full bg-surface border-b border-black/10 dark:border-white/10">
+              <div className="relative aspect-[16/9] w-full bg-surface border-b border-black/10 dark:border-white/10 overflow-hidden">
                 <Image src={p.coverImage} alt={p.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
                 {p.winner && (
-                  <span className="absolute top-2 left-2 text-xs px-2 py-1 rounded bg-[color:var(--accent)] text-white shadow">🏆 Winner</span>
+                  <span className="pointer-events-none select-none absolute -left-10 top-3 rotate-[-45deg] bg-[color:var(--accent)] text-white px-10 py-1 text-xs shadow">🏆 Winner</span>
                 )}
               </div>
             )}
             <div className="p-5">
-              <h2 className="text-xl font-semibold"><Link className="hover:underline" href={`/projects/${p.slug}`}>{p.title}</Link></h2>
+              <h2 className="text-xl font-semibold">{p.title}</h2>
               {p.summary && (
                 <p className="text-sm text-[color:var(--muted)] mt-1">{p.summary}</p>
               )}
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
                   <a href={p.links.demo} target="_blank" rel="noreferrer" className="underline text-sm">View Demo →</a>
                 )}
                 {!p.links?.repo && !p.links?.devpost && !p.links?.demo && (
-                  <Link className="underline text-sm" href={`/projects/${p.slug}`}>View details →</Link>
+                  <span className="text-sm text-[color:var(--muted)]">Links coming soon</span>
                 )}
               </div>
             </div>
