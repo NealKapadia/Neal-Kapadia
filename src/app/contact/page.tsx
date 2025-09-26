@@ -28,7 +28,7 @@ export default function ContactPage() {
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
       reset();
-    } catch (e) {
+    } catch {
       setStatus("error");
     }
   };

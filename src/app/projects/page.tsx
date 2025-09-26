@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "../../data/projects";
 
 export default function ProjectsPage() {
@@ -9,8 +10,8 @@ export default function ProjectsPage() {
         {projects.map((p) => (
           <li key={p.slug} className="rounded-lg border border-black/10 dark:border-white/15 bg-white/80 dark:bg-black/20 overflow-hidden">
             {p.coverImage && (
-              <div className="aspect-[16/9] w-full bg-surface border-b border-black/10 dark:border-white/10">
-                <img src={p.coverImage} alt={p.title} className="h-full w-full object-cover" />
+              <div className="relative aspect-[16/9] w-full bg-surface border-b border-black/10 dark:border-white/10">
+                <Image src={p.coverImage} alt={p.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </div>
             )}
             <div className="p-5">

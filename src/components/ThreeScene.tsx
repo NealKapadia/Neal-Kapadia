@@ -5,15 +5,19 @@ import { Environment, OrbitControls, Text, useTexture } from "@react-three/drei"
 import { Suspense, useMemo } from "react";
 import { projects, type Project } from "../data/projects";
 
+function TextureMaterial({ url }: { url: string }) {
+  // Hook is always called when this component is rendered.
+  const tex = useTexture(url);
+  return <meshStandardMaterial map={tex} />;
+}
 
 function ProjectCard3D({ project }: { project: Project }) {
-  const tex = project.coverImage ? useTexture(project.coverImage) : null;
   return (
     <group>
       <mesh>
         <boxGeometry args={[2.2, 1.3, 0.1]} />
-        {tex ? (
-          <meshStandardMaterial map={tex} />
+        {project.coverImage ? (
+          <TextureMaterial url={project.coverImage} />
         ) : (
           <meshStandardMaterial color="#e5e5e5" />
         )}
