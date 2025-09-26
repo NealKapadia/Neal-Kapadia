@@ -1,14 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10 space-y-6">
+    <div className="mx-auto max-w-4xl px-4 py-10 space-y-8">
+      <div className="relative w-full h-64 rounded-lg overflow-hidden border border-black/10 dark:border-white/15">
+        <Image src="/images/bg.jpeg" alt="Japan trip" fill className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        <div className="absolute bottom-3 left-4 right-4 text-white drop-shadow">
+          <p className="text-sm italic">&quot;Not everyone who works hard are rewarded, however all those who succeed have worked hard.&quot; — Kamogawa Genji, Hajime No Ippo</p>
+        </div>
+      </div>
+
       <h1 className="text-3xl font-semibold tracking-tight">About Me</h1>
       <p className="text-[color:var(--muted)]">
-        Passionate Computer Engineering student with a Biology minor — driven to improve healthcare through technology.
+        I’m Neal Kapadia, a Computer Engineering student with a Biology minor. I like building useful things where engineering meets science—AI/ML in healthcare, tools that explain themselves, and interfaces that feel playful without getting in your way.
       </p>
-      <p className="text-sm text-[color:var(--muted)]">
-        I’m currently pursuing a Bachelor of Science at the University of Texas at Dallas (Academic Excellence Award Recipient). I enjoy building interactive, performant experiences that bridge design and engineering — often with React, Next.js, and three.js — and exploring AI/ML applications that can make a real-world impact.
+      <p className="text-[color:var(--muted)]">
+        Outside of code: I’m into tennis, golf, lifting, piano, and watching anime. I care about iteration, clear thinking, and systems that scale (from codebases to habits).
       </p>
       <div>
         <h2 className="text-xl font-semibold">Skills</h2>
