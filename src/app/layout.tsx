@@ -16,25 +16,25 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Neal Kapadia — Software Engineering",
+    default: "Neal Kapadia — Computer Engineering",
     template: "%s | Neal Kapadia",
   },
   description:
-    "Portfolio and case studies by Neal Kapadia, focusing on software engineering, three.js experiences, and AI/ML projects.",
+    "Projects at the intersection of AI/ML, biotech, and playful 3D UX.",
   metadataBase: new URL("https://your-domain.com"), // TODO: update to your real domain or Vercel URL
   openGraph: {
-    title: "Neal Kapadia — Software Engineering",
+    title: "Neal Kapadia — Computer Engineering",
     description:
-      "Portfolio and case studies by Neal Kapadia, focusing on software engineering, three.js experiences, and AI/ML projects.",
+      "Projects at the intersection of AI/ML, biotech, and playful 3D UX.",
     url: "https://your-domain.com",
     siteName: "Neal Kapadia",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neal Kapadia — Software Engineering",
+    title: "Neal Kapadia — Computer Engineering",
     description:
-      "Portfolio and case studies by Neal Kapadia, focusing on software engineering, three.js experiences, and AI/ML projects.",
+      "Projects at the intersection of AI/ML, biotech, and playful 3D UX.",
   },
 };
 
