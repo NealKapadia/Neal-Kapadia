@@ -16,14 +16,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Neal Kapadia — Computer Engineering",
+    default: "Neal Kapadia",
     template: "%s | Neal Kapadia",
   },
   description:
     "Projects at the intersection of AI/ML, biotech, and playful 3D UX.",
   metadataBase: new URL("https://your-domain.com"), // TODO: update to your real domain or Vercel URL
   openGraph: {
-    title: "Neal Kapadia — Computer Engineering",
+    title: "Neal Kapadia",
     description:
       "Projects at the intersection of AI/ML, biotech, and playful 3D UX.",
     url: "https://your-domain.com",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neal Kapadia — Computer Engineering",
+    title: "Neal Kapadia",
     description:
       "Projects at the intersection of AI/ML, biotech, and playful 3D UX.",
   },

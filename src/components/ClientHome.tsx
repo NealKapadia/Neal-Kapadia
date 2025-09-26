@@ -19,7 +19,7 @@ export default function ClientHome() {
 
       <section className="space-y-3">
         <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight">
-          Neal Kapadia — Computer Engineering + Biology Minor
+          Neal Kapadia
         </h1>
         <p className="text-[color:var(--muted)] max-w-2xl">
           I build at the intersection of AI/ML, biotech, and playful 3D UX. Curious by default, practical by design.
